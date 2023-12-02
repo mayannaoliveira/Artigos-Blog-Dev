@@ -9,6 +9,12 @@
 - [Oh My Posh e o Antivírus](#oh-my-posh-e-o-antivírus) 
 - [Posh Git e Oh My Posh](#posh-git-e-oh-my-posh)
 - [Alterar o Tema](#alterar-o-tema)
+<<<<<<< HEAD
+=======
+- []()
+- []()
+- []()
+>>>>>>> a3b281d6655fbc8b6f6825cb5917ae7f5d736305
 
 ---
 
@@ -26,8 +32,12 @@ Antes de iniciar a instalação é necessário configurar os pré-requisitos:
 ## Instalação do Windget
 Toda a instalação no Oh My Posh é realizada via terminal utilizando o [Winget](https://apps.microsoft.com/detail/9NBLGGH4NNS1?hl=pt-br&gl=US) para a instalação do pacote.
 Apenas acesse a Microsoft Store diretamente da sua máquina, busque por Winget e clique em instalar.
+<<<<<<< HEAD
 
 ![img-winget](.\articles\terminal-oh-my-posh\img\winget.png)
+=======
+![img-winget](.\img\winget.png)
+>>>>>>> a3b281d6655fbc8b6f6825cb5917ae7f5d736305
 
 ---
 
@@ -36,6 +46,7 @@ Apenas acesse a Microsoft Store diretamente da sua máquina, busque por Winget e
 A instalação do tema [Dracula](https://draculatheme.com/windows-terminal) no Windowns Terminal é bem simples.
 1. Clique no terminal com o botão direito do mouse e vá em `Configurações`.
 2. Dentro das configurações acesse a opção `Abrir com JSON`.
+<<<<<<< HEAD
 
 ![img-schema-1](.\articles\terminal-oh-my-posh\img\scheme-1.png)
 
@@ -43,6 +54,11 @@ A instalação do tema [Dracula](https://draculatheme.com/windows-terminal) no W
 
 ![img-schema-2](.\articles\terminal-oh-my-posh\img\scheme-2.png)
 
+=======
+![img-schema-1](.\img\scheme-1.png)
+3. Insira dentro do bloco Schemes o [tema do Dracula](https://draculatheme.com/windows-terminal).
+![img-schema-2](.\img\scheme-2.png)
+>>>>>>> a3b281d6655fbc8b6f6825cb5917ae7f5d736305
 - Código do tema do Dracula: 
 ```json
 "schemes": [
@@ -74,6 +90,7 @@ A instalação do tema [Dracula](https://draculatheme.com/windows-terminal) no W
 ```
 - A partir do exemplo acima é possível também criar o seu próprio tema com suas cores favorias.
 4. Para alterar o tema do Windows Terminal acesse novamente as `Configurações` > `Esquema de Cores`, selecione `Dracula` e salve.
+<<<<<<< HEAD
 
 ![img-dracula-1](.\articles\terminal-oh-my-posh\img\dracula-1.png)
 
@@ -81,6 +98,11 @@ A instalação do tema [Dracula](https://draculatheme.com/windows-terminal) no W
 
 ![img-dracula-2](.\articles\terminal-oh-my-posh\img\dracula-2.png).
 
+=======
+![img-dracula-1](.\img\dracula-1.png).
+5. Caso o passo 4 não funcione acesse `Configurações` > `PoweShell` > `Aparência` > `Esquema de Cores`, selecione `Dracula` e salve.
+![img-dracula-2](.\img\dracula-2.png).
+>>>>>>> a3b281d6655fbc8b6f6825cb5917ae7f5d736305
 6. Aproveite que está no passo 5 e troque o `Tipo de Fonte` para `FireCore Nerd Font` e salve.
 
 ---

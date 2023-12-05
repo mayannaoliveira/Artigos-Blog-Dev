@@ -1,4 +1,5 @@
 # Terminal do Windows com Oh My Posh
+[![Documentation][docs-badge]][docs]
 
 #### Conteúdo
 
@@ -9,14 +10,7 @@
 - [Oh My Posh e o Antivírus](#oh-my-posh-e-o-antivírus) 
 - [Posh Git e Oh My Posh](#posh-git-e-oh-my-posh)
 - [Alterar o Tema](#alterar-o-tema)
-<<<<<<< HEAD
-=======
-- []()
-- []()
-- []()
->>>>>>> a3b281d6655fbc8b6f6825cb5917ae7f5d736305
 
----
 
 ### Requisitos
 
@@ -32,12 +26,8 @@ Antes de iniciar a instalação é necessário configurar os pré-requisitos:
 ## Instalação do Windget
 Toda a instalação no Oh My Posh é realizada via terminal utilizando o [Winget](https://apps.microsoft.com/detail/9NBLGGH4NNS1?hl=pt-br&gl=US) para a instalação do pacote.
 Apenas acesse a Microsoft Store diretamente da sua máquina, busque por Winget e clique em instalar.
-<<<<<<< HEAD
 
-![img-winget](.\articles\terminal-oh-my-posh\img\winget.png)
-=======
-![img-winget](.\img\winget.png)
->>>>>>> a3b281d6655fbc8b6f6825cb5917ae7f5d736305
+<img src="/articles/terminal-oh-my-posh/img/winget.png" alt="Terminal do Windows com Oh My Posho" style="width:50%;"/>
 
 ---
 
@@ -48,17 +38,12 @@ A instalação do tema [Dracula](https://draculatheme.com/windows-terminal) no W
 2. Dentro das configurações acesse a opção `Abrir com JSON`.
 <<<<<<< HEAD
 
-![img-schema-1](.\articles\terminal-oh-my-posh\img\scheme-1.png)
+<img src="/articles/terminal-oh-my-posh/img/scheme-1.png" alt="Terminal do Windows com Oh My Posho" style="width:80%;"/>
 
 3. Insira dentro do bloco Schemes o [tema do Dracula](https://draculatheme.com/windows-terminal).
 
-![img-schema-2](.\articles\terminal-oh-my-posh\img\scheme-2.png)
+<img src="/articles/terminal-oh-my-posh/img/scheme-2.png" alt="Terminal do Windows com Oh My Posho" style="width:50%;"/>
 
-=======
-![img-schema-1](.\img\scheme-1.png)
-3. Insira dentro do bloco Schemes o [tema do Dracula](https://draculatheme.com/windows-terminal).
-![img-schema-2](.\img\scheme-2.png)
->>>>>>> a3b281d6655fbc8b6f6825cb5917ae7f5d736305
 - Código do tema do Dracula: 
 ```json
 "schemes": [
@@ -90,19 +75,13 @@ A instalação do tema [Dracula](https://draculatheme.com/windows-terminal) no W
 ```
 - A partir do exemplo acima é possível também criar o seu próprio tema com suas cores favorias.
 4. Para alterar o tema do Windows Terminal acesse novamente as `Configurações` > `Esquema de Cores`, selecione `Dracula` e salve.
-<<<<<<< HEAD
-
-![img-dracula-1](.\articles\terminal-oh-my-posh\img\dracula-1.png)
+ 
+<img src="/articles/terminal-oh-my-posh/img/dracula-1.png" alt="Terminal do Windows com Oh My Posho" style="width:80%;"/>
 
 5. Caso o passo 4 não funcione acesse `Configurações` > `PoweShell` > `Aparência` > `Esquema de Cores`, selecione `Dracula` e salve.
 
-![img-dracula-2](.\articles\terminal-oh-my-posh\img\dracula-2.png).
+<img src="/articles/terminal-oh-my-posh/img/dracula-2.png" alt="Terminal do Windows com Oh My Posho" style="width:80%;"/>
 
-=======
-![img-dracula-1](.\img\dracula-1.png).
-5. Caso o passo 4 não funcione acesse `Configurações` > `PoweShell` > `Aparência` > `Esquema de Cores`, selecione `Dracula` e salve.
-![img-dracula-2](.\img\dracula-2.png).
->>>>>>> a3b281d6655fbc8b6f6825cb5917ae7f5d736305
 6. Aproveite que está no passo 5 e troque o `Tipo de Fonte` para `FireCore Nerd Font` e salve.
 
 ---
@@ -138,6 +117,8 @@ O [Posh Git](https://github.com/dahlbyk/posh-git) é um módulo do PowerShell qu
 
 Instale ambos através dos comandos `Install-Module posh-git -Scope CurrentUser` e logo após o comando `Install-Module oh-my-posh -Scope CurrentUser`
 
+---
+
 ## Alterar o Tema
 Para verificar todos os temas disponíveis use o comando `Get-PoshThemes`. Caso queira alterar é só seguir os passos já abordados:
 1. Acessar o terminal e usar o comando `notepad $PROFILE` ou `code $PROFILE`.
@@ -147,3 +128,89 @@ import-Module oh-my-posh
 Set-PoshPrompt -Theme JanDeDobbeleer
 ```
 
+---
+## Instalação do PSReadLine
+
+
+O [PSReadLine](https://github.com/PowerShell/PSReadLine) vai ajudar a otimizar a sua experiência no uso do terminal, a instalação é simples:
+
+1. Digite no terminal o comando: `Install-Module PSReadLine -AllowPrerelease -Force`.
+2. Use o `notepad $PROFILE` para acessar o perfil e inserir as linhas:
+
+```powershell
+if ($host.Name -eq 'ConsoleHost')
+{
+    Import-Module PSReadLine
+}
+```
+
+## Manipulando Segmentos
+
+O Oh My Posh tem alguns [seguimentos](https://ohmyposh.dev/docs/segments/git) que podem ser instalados conforme sua rotina de trabalho, abaixo veja o exemplo de um usuário de Git:
+
+```json
+{
+	"type": "git",
+	"style": "powerline",
+	"powerline_symbol": "",
+	"invert_powerline": false,
+	"foreground": "#193549",
+	"background": "#fffb38",
+	"leading_diamond": "",
+	"trailing_diamond": "",
+	"properties": {
+		"display_status": true,
+		"display_stash_count": true,
+		"display_upstream_icon": true
+}
+```
+Os [segmentos](https://ohmyposh.dev/docs/configuration/segment) estão disponíveis no site do projeto e sao inseridos dentro do `block` conforme o exemplo abaixo:
+
+```json
+{
+    "blocks": [
+        {
+            // positioning metadata (not shown)
+            "segments": []
+        }
+    ]
+}
+```
+## Instalação do Terminal Icons
+
+`Install-Module -Name Terminal-Icons -Repository PSGallery`
+
+`Import-Module -Name Terminal-Icons`
+
+
+## Instalação do Autocomplete
+
+`Install-Module PSReadLine -AllowPrerelease -Force`
+
+`Import-Module PSReadLine`
+
+```powershell
+Set-PSReadLineOption -PredictionSource History
+Set-PSReadLineOption -PredictionViewStyle ListView
+Set-PSReadLineOption -EditMode Windows
+```
+
+## Alterando as Cores
+
+As [cores padrão](https://ohmyposh.dev/docs/configuration/colors) também podem ser alteradas conforme exemplo:
+
+## Corrigindo Fonts no Terminal
+
+Caso o terminal não exiba das fonts é somente rodar o comando `oh-my-posh font install --user` e todas as fonts e icones irão aparece na linha de comando.
+Caso continue aparecendo caracteres qubrados digite o comando `notepade $PROFILE` e insira a linha `oh-my-posh config migrate glyphs --write` veja o exemplo abaixo:
+
+```powershell
+import-Module oh-my-posh
+Set-PoshPrompt -Theme JanDeDobbeleer
+oh-my-posh config migrate glyphs --write
+```
+Essa foi a recomendação da própria documentação no link [After updating my Nerd Font to a newer version, the prompt displays unknown characters](https://ohmyposh.dev/docs/faq#after-updating-my-nerd-font-to-a-newer-version-the-prompt-displays-unknown-characters).
+
+
+[docs-badge]: https://img.shields.io/badge/Docs-ohmyposh.dev-blue
+[docs]: https://ohmyposh.dev

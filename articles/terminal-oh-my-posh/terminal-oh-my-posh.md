@@ -1,5 +1,7 @@
 # Terminal do Windows com Oh My Posh
 
+![cover](img/cover.png)
+
 <!-- Hashtags: #ohmyposh #terminal #windows-->
 
 <!-- Lista de Badges -->

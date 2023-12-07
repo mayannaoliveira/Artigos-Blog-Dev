@@ -1,5 +1,7 @@
 # Terminal do Windows com Oh My Posh
 
+![cover](./img/cover.png)
+
 <!-- Hashtags: #ohmyposh #terminal #windows-->
 
 <!-- Lista de Badges -->
@@ -307,7 +309,7 @@ Para exibir seu terminal no VS Code da mesma forma que no Windows Terminal basta
 ---
 
 #### Anexo
-No fim o profile do Oh My Posh ficará conforme o exemplo em [anexo](files/anexos.zip).
+No fim o profile do Oh My Posh ficará conforme o exemplo em [anexo](./files/anexos.zip).
 
 <!-- Badges -->
 [PoshGit]: https://github.com/dahlbyk/posh-git
